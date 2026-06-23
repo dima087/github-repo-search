@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c0c0c0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 500px;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    display: none;
+}
+
+/* ===== AUTOCOMPLETE ===== */
+.autocomplete-container {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #000;
+    border-bottom: none;
+    outline: none;
+    background-color: #fff;
+}
+
+#searchInput::placeholder {
+    color: #999;
+}
+
+.autocomplete-list {
+    width: 100%;
+    background: #fff;
+    border: 2px solid #000;
+    border-top: none;
+    display: none;
+}
+
+.autocomplete-list.active {
+    display: block;
+}
+
+.autocomplete-item {
+    padding: 10px 12px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item:hover {
+    background-color: #66ccff;
+}
+
+/* ===== REPOSITORIES LIST ===== */
+.repositories-list {
+    border: 2px solid #000;
+    background-color: #d870e8;
+}
+
+#repositoriesList {
+    display: flex;
+    flex-direction: column;
+}
+
+.repository-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #d870e8;
+    border-bottom: 2px solid #000;
+    transition: none;
+}
+
+.repository-item:last-child {
+    border-bottom: none;
+}
+
+.repository-info {
+    flex: 1;
+}
+
+.repository-name {
+    font-size: 18px;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.repository-owner {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.repository-stars {
+    font-size: 18px;
+    color: #000;
+}
+
+.repository-stars .star-icon {
+    display: none;
+}
+
+.delete-btn {
+    background: none;
+    color: #ff0000;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    padding: 0 10px;
+    font-weight: bold;
+    line-height: 1;
+    transition: none;
+}
+
+.delete-btn:hover {
+    background: none;
+    color: #cc0000;
+}
+
+.empty-message {
+    display: none;
+}
+
+/* Loading / No results */
+.loading,
+.no-results {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #000;
+    color: #000;
+}
